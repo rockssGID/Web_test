@@ -20,6 +20,21 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     width: 100%;
     font-size: 16px;
+    --sb-track-color: #ffffff00;
+    --sb-thumb-color: #9ad2b0;
+    --sb-size: 1rem;
+}
+body::-webkit-scrollbar{
+    width: var(--sb-size);
+    border-radius: var(--sb-size);
+}
+body::-webkit-scrollbar-track{
+    background-color: var(--sb-track-color);
+    border-radius: var(--sb-size);
+}
+body::-webkit-scrollbar-thumb{
+    background: var(--sb-thumb-color);
+    border-radius: var(--sb-size);
 }
 /*footer*/
 /*Бар меню pc*/
