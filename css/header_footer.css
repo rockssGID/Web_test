@@ -1,0 +1,274 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+@font-face {
+    font-family: TDVolshebstvo;
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/TDVolshebstvo.ttf");
+}
+@font-face {
+    font-family: "Georgia";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/georgia.ttf");
+}
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+    font-size: 16px;
+}
+/*footer*/
+/*Бар меню pc*/
+.menu-container-pc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.3% 4%;
+    margin: 0.5% 5% 0%;
+    border-radius: 10px;
+    position: fixed;
+    width: 90%;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0 4px 63px rgba(0, 0, 0, 1.2);
+}
+.menu-container-pc>a {
+    padding: 0 7px;
+    text-decoration: none;
+    font-family: "TDVolshebstvo";
+    font-size: 1.563em;
+    color: #595959;
+}
+.menu-container-pc>a:hover {
+    transform: scale(1.1);
+}
+
+/*Дроп меню pc*/
+.drop-menu-pc {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.drop-button {
+    text-decoration: none;
+    font-family: "TDVolshebstvo";
+    font-size: 1.563em;
+    color: #595959;
+    border-radius: 10px;
+    box-shadow: 0 20px 44px rgba(0, 0, 0, 0.6);
+    border: 1px solid #ddd;
+    transition: background-color 0.3s;
+    background-color: white;
+    margin-top: 7px;
+    padding: 5px 0;
+    width: 220px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.drop-button:hover {
+    transform: scale(1.1);
+}
+/*Меню mobil*/
+.menu-container-mobil > a {
+    display: none;
+    text-decoration: none;
+    font-family: "TDVolshebstvo";
+    font-size: 1.563em;
+    color: #595959;
+    position: fixed;
+    box-shadow: 0 20px 44px rgba(0, 0, 0, 0.6);
+    border: 1px solid #ddd;
+    transition: background-color 0.3s;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 10px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.menu-mobil {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border: 2px solid #595959;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-mobil::before,
+.menu-mobil::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #595959;
+}
+.menu-mobil::before {
+    top: 15px;
+}
+.menu-mobil::after {
+    bottom: 15px;
+}
+.menu-mobil > span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #595959;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.drop-button-mobil {
+    text-decoration: none;
+    font-family: "TDVolshebstvo";
+    font-size: 1.563em;
+    color: #595959;
+    border-radius: 10px;
+    box-shadow: 0 20px 44px rgba(0, 0, 0, 0.6);
+    border: 1px solid #ddd;
+    transition: background-color 0.3s;
+    background-color: white;
+    margin-top: 7px;
+    padding: 5px 0;
+    width: 220px;
+    text-align: center;
+}
+.drop-button-mobil:hover {
+    transform: scale(1.1);
+}
+.drop-menu-mobil {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    bottom: 85px;
+    right: 20px;
+    z-index: 5;
+}
+.drop-catalog-mobil {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    bottom: 85px;
+    right: 20px;
+    z-index: 10;
+}
+footer {
+    background-color: #595959;
+    box-shadow: inset 0 5px 44px rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    padding: 20px 0;
+    justify-content: center;
+}
+footer>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    flex-wrap: wrap;
+    margin: 0 5%;
+
+}
+footer>div>img {
+    margin:0 20px;
+}
+footer>div>nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.footer-catalog {
+    display: flex;
+    margin: 15px 17px;
+}
+.footer-catalog>div {
+    margin: 10px 17px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-stock {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 50px;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 15px 50px;
+}
+.footer-connection {
+    margin: 15px 0;
+}
+.footer-connection-one {
+    color: #E2E2E2;
+    font-size: 1.625em;
+    font-family: "Georgia";
+    text-align: center;
+    margin: 7px 0;
+}
+.footer-connection-mail {
+    color: #E2E2E2;
+    font-size: 1.188em;
+    font-family: "Georgia";
+    text-align: center;
+    margin: 7px 0;
+}
+.footer-connection>div {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.footer-connection>div>a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    height: 70px;
+    width: 70px;
+}
+.footer-connection>div>a:hover {
+    transform: scale(1.1);
+    background-color: #0084ff;
+}
+.footer-catalog>div>a,
+.footer-stock>a,
+.footer-info>a {
+    text-decoration: none;
+    color: #E2E2E2;
+    font-size: 1.188em;
+    font-family: "Georgia";
+    margin: 3px 0;
+    text-align: center;
+}
+.footer-catalog>div>a:hover,
+.footer-stock>a:hover,
+.footer-info>a:hover {
+    transform: scale(1.1);
+    color: #ffae22;
+}
+.prava>p {
+    text-decoration: none;
+    color: #E2E2E2;
+    font-size: 1em;
+    font-family: "Georgia";
+}
+.prava {
+    max-width: 100%;
+    justify-content: center;
+    margin: 20px 00;
+}

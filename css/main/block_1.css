@@ -1,0 +1,76 @@
+.block-logo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding-top: 10vh;
+    position: relative;
+    background: radial-gradient(circle, #D2C29A 0%, #9F8E77 100%);
+}
+.block-logo>img{
+    position: absolute;
+    height: 75%;
+    width: auto;
+}
+.block-logo>img:nth-of-type(1){
+    animation: logo-animation-2 60s infinite;
+}
+.block-logo>img:nth-of-type(2){
+    animation: logo-animation-1 50s infinite;
+}
+.block-logo>img:nth-of-type(3){
+    animation: logo-animation-2 40s infinite;
+}
+.block-logo>img:nth-of-type(4){
+    animation: logo-animation-3 5s infinite;
+}
+.block-logo>img:nth-of-type(5){
+    animation: logo-animation-4 1.5s infinite;
+    display: flex;
+    position: absolute;
+    bottom: 15vh;
+    width: 50px;
+    height: auto;
+}
+
+@keyframes logo-animation-1 {
+    0% {
+        transform: scale(1) rotate(0deg) ;
+    }
+    50% {
+        transform: scale(1.2) rotate(-180deg);
+    }
+    100% {
+        transform: scale(1) rotate(-360deg);
+    }
+}
+@keyframes logo-animation-2 {
+    0% {
+        transform: scale(1) rotate(0deg) ;
+    }
+    50% {
+        transform: scale(0.9) rotate(180deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+@keyframes logo-animation-3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes logo-animation-4 {
+    0% {
+        bottom: 15vh;
+    }
+    100% {
+        bottom: 5vh;
+    }
+}
