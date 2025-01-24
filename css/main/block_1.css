@@ -26,6 +26,7 @@
     animation: logo-animation-3 5s infinite;
 }
 .block-logo>img:nth-of-type(5){
+    width: 0; 
     animation: logo-animation-4 1.5s infinite;
     display: flex;
     position: absolute;
@@ -75,3 +76,30 @@
         bottom: 5vh;
     }
 }
+.text-typing {
+    display: none;
+    font-family: "TDVolshebstvo";
+    color: #595959;
+    font-size: 2em;
+    position: absolute;
+    bottom: 25vh;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap; 
+    width: 0; 
+    animation: typing 2s ease-in-out forwards;
+  }
+  
+  @keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+  }
+
+
+  
+
+  
