@@ -171,7 +171,7 @@ body::-webkit-scrollbar-thumb{
     position: fixed;
     bottom: 85px;
     right: 20px;
-    z-index: 5;
+    z-index: 1000;
 }
 .drop-catalog-mobil {
     display: none;
@@ -179,7 +179,7 @@ body::-webkit-scrollbar-thumb{
     flex-direction: column;
     bottom: 85px;
     right: 20px;
-    z-index: 10;
+    z-index: 1000;
 }
 footer {
     background-color: #595959;
