@@ -69,6 +69,7 @@ body::-webkit-scrollbar-thumb{
     position: absolute;
     top: 100%;
     left: 0;
+    z-index: 1000;
 }
 
 .drop-button {
@@ -86,6 +87,7 @@ body::-webkit-scrollbar-thumb{
     width: 220px;
     text-align: center;
     flex-wrap: wrap;
+    z-index: 1000;
 }
 .drop-button:hover {
     transform: scale(1.1);

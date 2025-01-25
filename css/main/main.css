@@ -170,3 +170,26 @@
     width: 230px;
     margin: 30px 6px;
 }
+.block-3{
+    background: radial-gradient(circle, #6B66B1, #5648B4);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block-3>div:nth-of-type(1){
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;    
+}
+.block-3>div:nth-of-type(1)>p{
+    font-family: "TDVolshebstvo";
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    width: 90%;
+    padding: 33px 0;
+    border-color: #fff;
+    border-bottom: 4px solid;
+}
