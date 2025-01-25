@@ -88,18 +88,82 @@
     white-space: nowrap; 
     width: 0; 
     animation: typing 2s ease-in-out forwards;
-  }
+}
   
-  @keyframes typing {
+@keyframes typing {
     from {
         width: 0;
     }
     to {
         width: 100%;
     }
-  }
+}
+.block-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: auto;
+}
+.block-2>div:nth-of-type(1),
+.block-2>div:nth-of-type(3){
+    width: 100%;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+.block-2>div:nth-of-type(1)>p,
+.block-2>div:nth-of-type(3)>p{
+    font-family: "TDVolshebstvo";
+    font-size: 3.125em;
+    color: #595959;
+    text-align: center;
+    margin: 0 20px;
+}
 
-
-  
-
-  
+.block-2>div:nth-of-type(2){
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.block-2>div:nth-of-type(2)>div{
+    width: 410px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.block-2>div:nth-of-type(2)>div>img{
+    margin: 20px;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+}
+.block-2>div:nth-of-type(2)>div>div{
+    width: 250px;
+    height: auto;
+    padding: 0 10px;
+}
+.block-2>div:nth-of-type(2)>div>div>p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.906em;
+    color: #595959;
+}
+.block-2>div:nth-of-type(4){
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+}
+.block-2>div:nth-of-type(4)>p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.906em;
+    color: #595959;
+    width: 230px;
+    margin: 30px 6px;
+}
