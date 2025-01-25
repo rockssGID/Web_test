@@ -129,14 +129,57 @@
             </div>
         </div>
         <div class="block-3">
-            <div>
+            <div class="top-block-3-1">
                 <p>Популярны дизайны</p>
             </div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div class="top-block-3-2">
+                <a href="#" >
+                    <img src="images/one_pis.png" alt="rug">
+                </a>
+                <a href="#">
+                    <img src="images/one_pis.png" alt="rug">
+                </a>
+                <a href="#">
+                    <img src="images/one_pis.png" alt="rug">
+                </a>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="images/one_pis.png" alt="rug">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="images/one_pis.png" alt="rug">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                            <img src="images/one_pis.png" alt="rug">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <div class="top-block-3-3">
+                <span></span>
+                <a href="#">Больше</a>
+                <span></span>
+            </div>
+            <div class="bottom-block-3-1">
+                <p>Акции и предложения</p>
+            </div>
+            <div class="bottom-block-3-2">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </div>
+            <div class="bottom-block-3-3">
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
         </div>
     </main>
     <footer>
@@ -186,6 +229,16 @@
             <p>Все права защищены</p>
         </div>
     </footer>
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/menu.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: true,
+        });
+    </script>
 </body>
 </html>
