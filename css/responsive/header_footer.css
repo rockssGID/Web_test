@@ -1,8 +1,0 @@
-@media screen and (max-width: 769px) {
-    .menu-container-pc{
-        display: none;
-    }
-    .menu-container-mobil>a {
-        display: flex;
-    }
-}
