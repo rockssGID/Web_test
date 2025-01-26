@@ -173,6 +173,7 @@
 .block-3{
     background: radial-gradient(circle, #6B66B1, #5648B4);
     width: 100%;
+    height: 800px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -197,28 +198,9 @@
 
 
 
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
+
   
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 10px;
-    font-family: 'DM Sans', sans-serif;
-    transition: background .4s ease-in;
-    background-color: #c394f8;
-    box-sizing: border-box;
-    
-    &.blue {
-      background-color: #428aa6;
-    }
-  }
+
   
   input[type=radio] {
     display: none;
@@ -254,7 +236,7 @@ html, body {
     margin-bottom: 20px;
   }
   
-  img {
+  .container>img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
