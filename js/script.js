@@ -16,39 +16,7 @@ class Carousel {
         // Инициализация свайпа
         this.addSwipeEvents();
     }
-    addSwipeEvents() {
-        this.carouselContainer.addEventListener('touchstart', (e) => {
-            // Проверяем, произошло ли касание внутри контейнера
-            if (!e.target.closest('.gallery-container')) return;
-    
-            this.touchStartX = e.changedTouches[0].clientX; // Сохраняем начальную координату X
-            this.touchStartY = e.changedTouches[0].clientY; // Сохраняем начальную координату Y
-        });
-    
-        this.carouselContainer.addEventListener('touchmove', (e) => {
-            if (!e.target.closest('.gallery-container')) return;
-    
-            const touchMoveX = e.changedTouches[0].clientX;
-            const touchMoveY = e.changedTouches[0].clientY;
-    
-            // Проверяем направление движения
-            const deltaX = Math.abs(touchMoveX - this.touchStartX);
-            const deltaY = Math.abs(touchMoveY - this.touchStartY);
-    
-            if (deltaX > deltaY) {
-                e.preventDefault(); // Блокируем вертикальную прокрутку
-            }
-        });
-    
-        this.carouselContainer.addEventListener('touchend', (e) => {
-            if (!e.target.closest('.gallery-container')) return;
-    
-            this.touchEndX = e.changedTouches[0].clientX; // Сохраняем конечную координату X
-            this.handleSwipe(); // Обработка свайпа
-        });
-    }
-    
-    
+
     addSwipeEvents() {
         // Начало касания
         this.carouselContainer.addEventListener('touchstart', (e) => {
@@ -94,10 +62,10 @@ class Carousel {
         this.carouselControls.forEach(control => {
             const button = document.createElement('button');
             button.className = `gallery-controls-${control}`;
+            button.innerText = control;
             galleryControlsContainer.appendChild(button);
         });
     }
-    
 
     useControls() {
         const trigger = [...galleryControlsContainer.children];
@@ -113,3 +81,4 @@ class Carousel {
 const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
 exampleCarousel.setControls();
 exampleCarousel.useControls();
+
