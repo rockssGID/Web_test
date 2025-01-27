@@ -83,6 +83,7 @@
         right: 50px;
     }
     .header_menu_2 {/* Меню всплывающее */
+        display: flex;
         right: -2000px;
         bottom: 100px;
         position: fixed;

@@ -113,3 +113,6 @@ html, body {
 .content_text p {
     margin-bottom: 20px;
 }
+.header_menu_2{
+    display: none;
+}
