@@ -334,15 +334,16 @@
         transition: all 0.4s ease 0s;
     }
     .header_menu.active{
-        /* right: 40px; */
+        right: 60px;
         display: flex;
         justify-content: center;
         align-items: center;
+        bottom: 140px;
         
     }
     .header_list{
         display: flex;
-        width: 600px;
+        width: 755px;
         height: auto;
         flex-wrap: wrap;
         justify-content: center;
@@ -366,11 +367,11 @@
     .header_menu_2.active{
 
 
-       right: 640px;
-       bottom: 340px;
+       right: 820px;
+       bottom: 304px;
     }
     .header_list_2{
-        width: 600px;
+        width: 755px;
         display: flex;
         position: fixed;
         flex-wrap: wrap;
