@@ -1,14 +1,12 @@
 *, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
+
 }
 :root {
     --text-color: #595959;
     --background-color-with: #ffffff;
     --box-shadow-black-inset: inset 0 5px 44px rgba(0, 0, 0, 0.6);
     --box-shadow-black: 0 2px 50px rgba(0, 0, 0, 0.6);
+    --box-shadow-black-button: 0 2px 30px rgba(0, 0, 0, 0.3);
 } 
 @font-face {
     font-family: TDVolshebstvo;
@@ -18,101 +16,137 @@
 }
 
 html, body {
-    height: 100%;
+    padding: 0;
+    margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 16px;
-    
-
-}
-
-.header {
-    position: fixed;
     width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-.header::before {
-    content: '';
-    width: 90%;
     height: 100%;
-    position: absolute;
+}
+body {
+}
+.header {
+}
+.contener {
+}
+.header_menu {
+}
+.menu_pc {
+    display: flex;
+    justify-content: center;
+}
+
+.control_menu_pc {
+    display: flex;
+    position: fixed;
+    flex-wrap: wrap;
+    width: 85%;
+    height: auto;
+    list-style: none;
+    align-items: center;
+    padding: 10px 0px;
     border-radius: 20px;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 15px 0px 0px 0px;
+    z-index: 1;
     background-color: var(--background-color-with);
     box-shadow: var(--box-shadow-black);
 }
-.conteiner {
-    position: relative;
-    top: 20px;
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 0 15px;
+.control_menu_pc li {
+    flex: 1 1 40px;
+    text-align: center;
 }
-.header_body {
-    position: relative;
-    z-index: 2;
-    display: flex;
+/* .control_menu_pc > li:nth-child(n+4){
+    flex: 0 1 auto;
+    justify-self: center;
+} */
+.control_menu_pc {
     justify-content: center;
-    height: 60px;
-    align-items: center;
-    top: auto;
 }
-.header_burger {
-    display: none;
+.control_menu_pc a {
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.5em;
+    font-family: "TDVolshebstvo";
+}
+.control_menu_pc a:hover{
+    transform: scale(1.1);
 }
 
-.header_menu {
-}
-.header_menu_2 {
-}
-.header_list {
+.menu_pc_list {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
+    margin: 0 20px;
+    justify-content: center; 
 }
-.header_list li {
+.menu_pc_list:hover{
+    transform: scale(1.1);
+}
+.menu_pc_catalog {
+}
+.control_menu_pc_catalog {
+    display: block;
     list-style: none;
-    display: flex;
-    
+    padding: 0;
+    left: -80%;
+    top: 70px;
+    width: 150px;
+    height: auto;
+    position: fixed;
+    transition: all 0.4s ease;
+    margin-top: 35px;
 }
-.header_list_2 {
+.control_menu_pc_catalog.open_catalog_pc{
+    left: 8%;
+}
+.menu_pc_catalog_list {
+}
+.control_menu_pc_catalog a{
     display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 9px 4px;
+    color: var(--text-color);
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    font-family: TDVolshebstvo;
     width: 100%;
-    justify-content: space-between;
+    background-color: var(--background-color-with);
+    box-shadow: var(--box-shadow-black-button);
+    z-index: 2;
 }
-.header_list_2 li {
-    list-style: none;
+.button_catalog_pc{
     display: flex;
-    
-}
-.header_link {
-    padding: 10px 10px;
+    background-color: var(--background-color-with);
+    padding: 9px 4px;
+    font-size: 1.5em;
     font-family: TDVolshebstvo;
     color: var(--text-color);
-    text-decoration: none;
-    font-size: 1.2rem;
+    border: none;    
 }
-.header_link_2 {
-    padding: 10px 10px;
-    font-family: TDVolshebstvo;
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: 1.2rem;
+.control_menu_pc_catalog a:hover{
+    transform: scale(1.1);
+}
+.menu_mobile {
+    display: none;
+}
+.control_mobile_menu {
+}
+.menu_mobile_list {
+}
+.menu_catalog_mobile {
+    display: none;
+}
+.control_catalog_mobile {
+}
+.menu_pc_catalog_mobile_list {
 }
 .content {
-    padding: 100px 0 0 0;
+    padding-top: 100px;
+}
+.conteiner_text {
 }
 .content_text {
-    
-    font-size: 1em;
-    line-height: 25px;
-}
-.content_text p {
-    margin-bottom: 20px;
-}
-.header_menu_2{
-    display: none;
 }
