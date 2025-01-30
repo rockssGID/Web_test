@@ -8,6 +8,50 @@
     box-shadow: 0 -10px 58px rgba(0, 0, 0, 1.2);
     justify-content: center;
 }
+.block1-logo>h1{
+    position: absolute;
+    bottom: 10vh;
+    font-weight: 100;
+    font-family: "TDVolshebstvo";
+    color: var(--text-color);
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    animation: typing 2s ease-in-out forwards;
+}
+.bottom_block_1 {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 50px;
+    height: 10px;
+    bottom: 10vh;
+    animation: logo-animation-4 1.5s infinite;
+    transition: all 0.3s ease 0s;
+}
+
+.bottom_block_1::after,
+.bottom_block_1::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background-color: var(--text-color);
+    transition: all 0.3s ease 0s;
+    animation: button-an 1.5s infinite;
+}
+
+.bottom_block_1::after {
+    transform: rotate(135deg);
+    right: 0;
+    top: 0;
+}
+
+.bottom_block_1::before {
+    transform: rotate(-135deg);
+    left: 0;
+    top: 0;
+}
 .logo-control{
     display: flex;
     justify-content: center;
@@ -30,15 +74,7 @@
 .logo-control>img:nth-of-type(4){
     animation: logo-animation-3 5s infinite;
 }
-.logo-control>img:nth-of-type(5){
-    width: 0; 
-    animation: logo-animation-4 1.5s infinite;
-    display: flex;
-    position: absolute;
-    bottom: 15vh;
-    width: 50px;
-    height: auto;
-}
+
 @keyframes logo-animation-1 {
     0% {
         transform: scale(1) rotate(0deg) ;
@@ -74,32 +110,76 @@
 }
 @keyframes logo-animation-4 {
     0% {
-        bottom: 15vh;
+        bottom: 10vh;
     }
     100% {
-        bottom: 5vh;
+        bottom: 2vh;
     }
-}
-.text-typing {
-    display: none;
-    font-family: "TDVolshebstvo";
-    color: #595959;
-    font-size: 2em;
-    position: absolute;
-    bottom: 25vh;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
-    white-space: nowrap; 
-    width: 0; 
-    animation: typing 2s ease-in-out forwards;
 }
   
 @keyframes typing {
     from {
-        width: 0;
+        opacity: 0;
     }
     to {
-        width: 100%;
+        opacity: 100;
     }
+}
+@keyframes button-an {
+    0%{
+        width: 0px;
+
+    }
+    30%{
+        width: 30px;
+    }
+}
+.block_2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: auto;
+    box-shadow: inset 0 -10px 63px rgba(0, 0, 0, 1.2);
+}
+.block_2_1{
+    margin-top: 30px;
+}
+.block_2_1 h2{
+    font-family: "TDVolshebstvo";
+    font-weight: 100;
+    color: var(--text-color);
+    font-size: 2em;
+}
+.block_2_2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.min_conteiner_1 {
+    display: flex;
+    width: 48%;
+    min-width: 400px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.min_conteiner_1 img{
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+.text_conteiner{
+
+}
+.text_conteiner h3 {
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 600;
+    margin: 0 25px;
+}
+.text_conteiner p {
+    text-align: center;
+    color: var(--text-color);
+    margin: 10px 25px;
 }
