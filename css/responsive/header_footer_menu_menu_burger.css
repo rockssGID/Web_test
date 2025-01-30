@@ -307,7 +307,7 @@
         justify-content: center;
     }
     .control_catalog_mobile li{
-        width: 30%;
+        width: 48%;
         margin: 1%;
         padding: 7px 0px;
         background-color: var(--background-color-with);
