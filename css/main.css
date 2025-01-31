@@ -165,6 +165,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 30px;
 }
 .min_conteiner_1 img{
     width: 100px;
@@ -172,7 +173,10 @@
     margin-bottom: 15px;
 }
 .text_conteiner{
-
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .text_conteiner h3 {
     text-align: center;
@@ -210,4 +214,65 @@
     text-align: center;
     color: var(--text-color);
     margin: 10px 25px;
+}
+
+.block_3 {
+    background: var(--background-color-blue);
+    width: 100%;
+}
+.block_3::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: var(--box-shadow-white-inset);
+}
+.top_design{
+    top: 0px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+.top_design::before{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 3px;
+    background: var(--background-color-with);
+    top: 100px;
+}
+.top_design h2{
+    color: var(--text-color-white);
+    font-family: "TDVolshebstvo";
+    font-size: 2em;
+    font-weight: 200;
+    margin: 40px 0 0 0;
+}
+.swiper {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding-bottom: 50px !important;
+}
+.swiper-wrapper {
+    box-sizing: content-box;
+}
+.swiper-slide {
+}
+.swiper-slide img {
+    width: 100%;
+
+}
+.no-select {
+	-webkit-user-select: none; /* Chrome/Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE/Edge */
+	user-select: none; /* Стандартный синтаксис */
+}
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right{
+    background-image: none;
 }

@@ -69,6 +69,10 @@
         width: unset;
         min-width: unset;
     }
+    .text_conteiner_2{
+        width: unset;
+        min-width: unset;
+    }
 }
 
 @media (max-width: 1024px) and (min-aspect-ratio: 3/2){
