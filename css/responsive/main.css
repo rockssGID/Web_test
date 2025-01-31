@@ -60,6 +60,10 @@
             width: 30px;
         }
     }
+    .button_top_designer::after,
+.button_top_designer::before{
+    display: none;
+}
 }
 @media (max-width: 451px){
     .block1-logo>h1{
@@ -73,6 +77,17 @@
         width: unset;
         min-width: unset;
     }
+.stock_slot_left,
+.stock_slot_mid,
+.stock_slot_reght{
+    transform: unset;
+    min-width: 235px;
+    min-height: 285px;
+}
+.stock_slot_left,
+.stock_slot_reght{
+    transform: scale(0.8);
+}
 }
 
 @media (max-width: 1024px) and (min-aspect-ratio: 3/2){

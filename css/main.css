@@ -217,8 +217,12 @@
 }
 
 .block_3 {
+    display: flex;
+    flex-direction: column;
     background: var(--background-color-blue);
     width: 100%;
+    min-width: 0;
+    position: relative;
 }
 .block_3::after{
     content: '';
@@ -243,28 +247,56 @@
     background: var(--background-color-with);
     top: 100px;
 }
-.top_design h2{
+.top_design>h2{
     color: var(--text-color-white);
     font-family: "TDVolshebstvo";
     font-size: 2em;
     font-weight: 200;
     margin: 40px 0 0 0;
 }
-.swiper {
-    width: 90%;
-    height: auto;
-    margin: 0 auto;
+.swiper_contener {
+    width: 100%;
+    position: relative;
+    height: 390px;
     margin-top: 50px;
-    padding-bottom: 50px !important;
 }
-.swiper-wrapper {
-    box-sizing: content-box;
+.swiper_top_designe {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
 }
-.swiper-slide {
+.slide_img {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .swiper-slide img {
     width: 100%;
-
+    height: auto;
+    transition: transform 0.3s ease;
+    object-fit: contain;
+    filter: drop-shadow(10px 10px 5px rgba(0,0,0,0.8));
+    opacity: 0;
+}
+.swiper-slide-active img {
+    height: 90%;
+    opacity: 1;
+    padding: 20px;
+}
+.swiper-slide-prev img,
+.swiper-slide-next img {
+    height: 70%;
+    opacity: 0.6;
+    padding: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.swiper-slide-prev,
+.swiper-slide-next,
+.swiper-slide-active{
+    display: flex;
+    height: 100%;
+    justify-content: center;
 }
 .no-select {
 	-webkit-user-select: none; /* Chrome/Safari */
@@ -275,4 +307,116 @@
 .swiper-3d .swiper-slide-shadow-left,
 .swiper-3d .swiper-slide-shadow-right{
     background-image: none;
+}
+.swiper-pagination-bullet-active{
+    background: var(--background-color-with);
+}
+
+.button_top_designer{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    padding: 0 10%;
+}
+.button_top_designer a{
+    display: flex;
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: "TDVolshebstvo";
+    font-size: 1.5em;
+    background: var(--background-color-with);
+    width: 383px;
+    height: 62px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    z-index: 2;
+}
+.button_top_designer a:hover{
+    transform: scale(1.1);
+}
+.button_top_designer::after,
+.button_top_designer::before{
+    display: flex;
+    content: '';
+    width: 20%;
+    height: 4px;
+    background: var(--background-color-with);
+}
+.button_top_designer::before{
+    margin-right: 10%;
+}
+.button_top_designer::after{
+    margin-left: 10%;
+}
+.stock {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+}
+.text_stock{
+    margin-top: 15px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+.stock h2 {
+    display: flex;
+    position: relative;
+    color: var(--text-color-white);
+    font-family: "TDVolshebstvo";
+    font-size: 2em;
+    font-weight: 100;
+}
+.stock_block{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 20px 0 0 0;
+    flex-wrap: wrap;
+}
+.stock_slot_left,
+.stock_slot_mid,
+.stock_slot_reght{
+    display: flex;
+    position: relative;
+    min-width: 363px;
+    min-height: 440px;
+    background: var(--background-color-with);
+    margin: 0 25px;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow-black-inset);
+}
+.stock_slot_left,
+.stock_slot_reght {
+    transform: scale(0.8);
+}
+.des_stayl {
+    display: flex;
+    width: 80%;
+    margin: 0 10%;
+    justify-content: center;
+    align-items: center;
+}
+.des_stayl::after,
+.des_stayl::before{
+    content: '';
+    display: flex;
+    width: 40%;
+    height: 4px;
+    background: var(--background-color-with);
+}
+.des_stayl span{
+    display: flex;
+    content: '';
+    min-width: 25px;
+    min-height: 25px;
+    background: var(--background-color-with);
+    margin: 2%;
+    border-radius: 50%;
 }
