@@ -74,6 +74,9 @@
         min-width: 15px;
         min-height: 15px;
     }
+    .block_4 a{
+        width: 300px;
+    }
 }
 @media (max-width: 451px){
     .block1-logo>h1{
@@ -100,9 +103,7 @@
 }
 }
 @media (max-width: 375px){
-    .block_4 a{
-        width: 80%;
-    }
+
 }
 
 @media (max-width: 1024px) and (min-aspect-ratio: 3/2){
