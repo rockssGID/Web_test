@@ -158,4 +158,8 @@
             width: 30px;
         }
     }
+    .des_stayl span{
+        min-width: 15px;
+        min-height: 15px;
+    }
 }
