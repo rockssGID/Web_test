@@ -1,3 +1,8 @@
+
+// Обнуление
+//--------------------------------------------
+//--------------------------------------------
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -18,21 +23,90 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
+
+
+
+
+
+
+
+
+
+// Макет 
+//----------------------------
+//----------------------------
+
+%swiper{
+  width: 95%;
+  height: 480px;
+
+
+  .swiper-wrapper{
+
+      .swiper-slide{
+          display: flex;
+          align-items: center;
+          opacity: 0;
+          transition: all 0.3s ease;
+          filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+          a{
+              display: flex;
+              img {
+                height: 420px;
+              }
+          }
+      }
+      
+      .swiper-slide.swiper-slide-active{
+          display: flex;
+          opacity: 1;
+          justify-content: center;
+          transition: all 0.3s ease;
+          z-index: 3;
+          &:hover{
+              transform: scale(1.05);
+          }
+      }
+      .swiper-slide.swiper-slide-prev,
+      .swiper-slide.swiper-slide-next{
+          display: flex;
+          justify-content: center;
+          opacity: 0.6;
+          transform: scale(0.8);
+          transition: all 0.3 ease;
+          &:hover {
+              transform: scale(0.85);
+          }
+      }
+  }
+
+}
+
 %ff{
   font-family: 'TDVolshebstvo';
 }
+
+
+
+// Присет 
+
+
 $ff: 'TDVolshebstvo';
 $color_grey: #595959;
 $color_white: #ffffff;
 
+// Функции 
+//-------------------------------
+//-------------------------------
 
 @function toRem($size) {
   @return ($size / 16px) + em;
 }
 
 
-
-
+//TODO Миксид 
+//---------------------------------
+//---------------------------------
 
 @mixin res($breakpoint) {
   @if $breakpoint == mobile {
@@ -45,6 +119,7 @@ $color_white: #ffffff;
     @media (max-width: 1200px) { @content; }
   }
 }
+
 @mixin button($fz,$ff,$c,$bc,$w,$h,$hover-c,$hover-bc){
   display: flex;
   text-decoration: none;
@@ -59,7 +134,6 @@ $color_white: #ffffff;
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
-
 }
 @mixin h_setting($c,$fz){
   @extend %ff;
@@ -72,7 +146,6 @@ $color_white: #ffffff;
   color: $c;
   font-size: toRem($fz);
 }
-//TODO Миксид иконки footer
 @mixin icon_conect($hover_bc){
   padding: 9px 9px 5px 9px;
   border-radius: 50%;
@@ -86,12 +159,15 @@ $color_white: #ffffff;
 
 
 
+//TODO Анимация
+//---------------------------------------------
+// Лого
+//---------------------------------------------
 
-//TODO Анимация для первого блока с лого 
 @keyframes logo-animation-1 {
   0% {
       transform: scale(1) rotate(0deg) ;
-  }
+    }
   50% {
       transform: scale(1.2) rotate(-180deg);
   }
@@ -107,7 +183,7 @@ $color_white: #ffffff;
       transform: scale(0.9) rotate(180deg);
   }
   100% {
-      transform: scale(1) rotate(360deg);
+    transform: scale(1) rotate(360deg);
   }
 }
 @keyframes logo-animation-3 {
@@ -115,27 +191,21 @@ $color_white: #ffffff;
       transform: scale(1);
   }
   50% {
-      transform: scale(0.9);
+    transform: scale(0.9);
   }
   100% {
-      transform: scale(1);
+    transform: scale(1);
   }
 }
+//---------------------------------------------
+// Стрелка указатель вниз 
+//---------------------------------------------
 @keyframes logo-animation-4 {
   0% {
-      bottom: 10vh;
+    bottom: 10vh;
   }
   100% {
-      bottom: 2vh;
-  }
-}
-
-@keyframes typing {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 100;
+    bottom: 2vh;
   }
 }
 @keyframes button-an {
@@ -145,5 +215,17 @@ $color_white: #ffffff;
   }
   30%{
       width: 30px;
+  }
+}
+//---------------------------------------------
+// Текст приветствие 
+//---------------------------------------------
+
+@keyframes typing {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 100;
   }
 }

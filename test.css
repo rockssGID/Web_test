@@ -1,0 +1,46 @@
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: aqua;
+}
+
+.swiper_contener {
+  width: 95%;
+  height: 480px;
+  background: #fff;
+}
+.swiper_contener .swiper-wrapper .swiper-slide {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5));
+}
+.swiper_contener .swiper-wrapper .swiper-slide a {
+  display: flex;
+}
+.swiper_contener .swiper-wrapper .swiper-slide a img {
+  height: 420px;
+}
+.swiper_contener .swiper-wrapper .swiper-slide.swiper-slide-active {
+  display: flex;
+  opacity: 1;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+.swiper_contener .swiper-wrapper .swiper-slide.swiper-slide-active:hover {
+  transform: scale(1.05);
+}
+.swiper_contener .swiper-wrapper .swiper-slide.swiper-slide-prev,
+.swiper_contener .swiper-wrapper .swiper-slide.swiper-slide-next {
+  display: flex;
+  justify-content: center;
+  opacity: 0.6;
+  transform: scale(0.8);
+  transition: all 0.3 ease;
+}
+.swiper_contener .swiper-wrapper .swiper-slide.swiper-slide-prev:hover,
+.swiper_contener .swiper-wrapper .swiper-slide.swiper-slide-next:hover {
+  transform: scale(0.85);
+}/*# sourceMappingURL=test.css.map */
